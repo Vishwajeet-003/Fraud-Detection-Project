@@ -1,0 +1,9 @@
+Month,DayOfWeek,Make,AccidentArea,MonthClaimed,DayOfWeekClaimed,Sex,MaritalStatus,Age,PolicyType,VehicleCategory,VehiclePrice,Deductible,DriverRating,Days_Policy_Accident,Days_Policy_Claim,AgeOfVehicle,AgeOfPolicyHolder,PoliceReportFiled,WitnessPresent,NumberOfCars,Year,BasePolicy,FraudFound_P
+Jul,Saturday,Honda,Urban,Sep,Tuesday,Male,Single,16.5,Sedan - All Perils,Sedan,more than 69000,400,1,more than 30,more than 30,new,16 to 17,No,No,1 vehicle,1994,All Perils,1
+Nov,Thursday,Accura,Rural,Jan,Tuesday,Male,Married,56,Utility - All Perils,Utility,more than 69000,400,2,more than 30,more than 30,more than 7,51 to 65,No,No,1 vehicle,1994,All Perils,1
+Jun,Saturday,Toyota,Rural,Jul,Friday,Male,Married,65,Sedan - Liability,Sport,20000 to 29000,400,2,more than 30,more than 30,more than 7,51 to 65,Yes,No,1 vehicle,1994,Liability,0
+Jan,Monday,Honda,Urban,Feb,Tuesday,Female,Single,27,Sport - Collision,Sport,more than 69000,400,1,more than 30,more than 30,5 years,31 to 35,No,No,1 vehicle,1994,Collision,0
+Dec,Wednesday,Pontiac,Rural,Jan,Wednesday,Male,Married,32,Sedan - All Perils,Sedan,20000 to 29000,400,1,more than 30,more than 30,7 years,31 to 35,No,No,1 vehicle,1995,All Perils,1
+Jun,Friday,Pontiac,Urban,Jul,Wednesday,Male,Divorced,46,Sedan - Collision,Sedan,20000 to 29000,400,4,more than 30,more than 30,6 years,41 to 50,No,No,1 vehicle,1996,Collision,1
+Dec,Monday,Mazda,Urban,Dec,Thursday,Male,Single,32,Sedan - Liability,Sport,30000 to 39000,400,3,more than 30,more than 30,5 years,31 to 35,No,No,1 vehicle,1996,Liability,0
+Feb,Tuesday,Accura,Urban,Feb,Monday,Male,Married,50,Sedan - All Perils,Sedan,30000 to 39000,400,4,more than 30,more than 30,more than 7,41 to 50,No,No,1 vehicle,1996,All Perils,0

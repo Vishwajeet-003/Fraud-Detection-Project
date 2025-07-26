@@ -1,0 +1,7 @@
+Fraud Detection and Analysis for Insurance Claim using Machine Learning.
+
+Algorithm / Model used: Random Forest Classifier.
+
+Accuracy score: 99%.
+
+

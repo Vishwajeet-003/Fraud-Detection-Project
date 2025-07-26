@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fraud Detection</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../static/css/st.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                <h1 class="m-0 text-primary"><span class="text-dark">Fraud </span>Detection</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                    <a href="{{url_for('index')}}" class="nav-item nav-link active">Home</a>
+                        <a href="{{url_for('login')}}" class="nav-item nav-link">Login</a>
+						                        <a href="{{url_for('upload')}}" class="nav-item nav-link">Upload</a>
+
+
+                        <a href="{{url_for('prediction')}}" class="nav-item nav-link">Prediction</a>
+						                        <a href="{{url_for('performance')}}" class="nav-item nav-link">Performance</a>
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+              <h3 class="display-4 text-white text-uppercase">Fraud Detection</h3>
+                <div class="d-inline-flex text-white">
+ 
+                    <p class="m-0 text-uppercase">Prediction</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Booking Start -->
+     
+    <!-- Booking End -->
+
+
+    
+    <!-- About End -->
+
+ 
+    <!-- Feature End -->
+
+ 
+    <!-- Registration End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;"></h6>
+                <h1>Fraud Detection</h1>
+            </div>
+
+ <div class="row" style="margin-left: 170px">
+            <div class="row">
+                <center><form action="{{ url_for('predict')}}" method="POST">
+          <div class="section-title">
+                 
+                      
+             
+   
+          
+              <div class="scrollable">
+               
+                 <center> <table>
+                
+                  <tbody>
+                    
+                      <td>Month:</td>
+                          <td>
+                              <select type="text" id= "Month" name="Month" method="post" required="required" placeholder="Month" width="300" style="width: 300px">
+                                 
+                                   
+                                <option value="1">Jan</option> 
+                                <option value="2">Feb</option>
+                                <option value="3">Mar</option> 
+                                <option value="4">Apr</option>
+                                <option value="5">May</option> 
+                                <option value="6">Jun</option>
+                                <option value="7">Jul</option>
+                                <option value="8">Aug</option>
+                                <option value="9">Sep</option>
+                                 <option value="10">Oct</option>
+                                 <option value="11">Nov</option>
+                                 <option value="12">Dec</option>
+                                  
+                              </select>
+                          </td>
+						  
+                          <td>DayOfWeek:</td>
+                          <td>
+                            <select type="text" id= "DayOfWeek" name="DayOfWeek" method="post" required="required" placeholder="DayOfWeek" width="300" style="width: 300px">
+                               
+                                 
+                              <option value="1">Monday</option> 
+                              <option value="2">Tuesday</option>
+                              <option value="3">Wednesday</option> 
+                              <option value="4">Thursday</option>
+                              <option value="5">Friday</option> 
+                              <option value="6">Saturday</option>
+                              <option value="7">Sunday</option>
+                             
+                                
+                            </select>
+                        </td>
+                           </tbody>
+                      <!-- Row 1 -->
+                      <tbody>
+                          <td>Make:</td>
+                           
+                          <td>
+                            <select type="text" id= "Make" name="Make" method="post" required="required" placeholder="Make" width="300" style="width: 300px">
+                               
+                                 
+                              <option value="1">Honda</option> 
+                              <option value="2">Toyota</option>
+                              <option value="3">Ford</option> 
+                              <option value="4">Mazda</option>
+                              <option value="5">Chevrolet</option> 
+                              <option value="6">Pontiac</option>
+                              <option value="7">Accura</option>
+                              <option value="8">Dodge</option> 
+                              <option value="9">Mercury</option>
+                              <option value="10">Jaguar</option> 
+                              <option value="11">Nisson</option>
+                              <option value="12">VW</option> 
+                              <option value="13">Saab</option>
+                              <option value="14">Saturn</option>
+                              <option value="15">Porche</option> 
+                              <option value="16">BMW</option>
+                              <option value="17">Mecedes</option> 
+                              <option value="18">Ferrari</option>
+                              <option value="19">Lexus</option>
+                             
+                            </select>
+                        </td>
+
+
+                          <td>AccidentArea:</td>
+                         
+                          <td>
+                            <select type="text" id= "AccidentArea" name="AccidentArea" method="post" required="required" placeholder="AccidentArea" width="300" style="width: 300px">
+                               
+                                 
+                              <option value="1">Urban</option> 
+                              <option value="2">Rural</option>
+                             
+                             
+                            </select>
+                        </td>
+                      </tbody>
+                      
+                      </br>
+                      </br>
+                  <tbody>
+				   <td>MonthClaimed:</td>
+                          <td>
+                            <select type="text" id= "MonthClaimed" name="MonthClaimed" method="post" required="required" placeholder="MonthClaimed" width="300" style="width: 300px">
+                               
+                                 
+                              <option value="1">Jan</option> 
+                                <option value="2">Feb</option>
+                                <option value="3">Mar</option> 
+                                <option value="4">Apr</option>
+                                <option value="5">May</option> 
+                                <option value="6">Jun</option>
+                                <option value="7">Jul</option>
+                                <option value="8">Aug</option>
+                                <option value="9">Sep</option>
+                                 <option value="10">Oct</option>
+                                 <option value="11">Nov</option>
+                                 <option value="12">Dec</option>
+                     
+                              
+        
+                             
+                                
+                            </select>
+                        </td>
+                  <td>DayOfWeekClaimed:</td>
+                  <td>
+                    <select type="text" id= "DayOfWeekClaimed" name="DayOfWeekClaimed" method="post" required="required" placeholder="DayOfWeekClaimed" width="300" style="width: 300px">
+                       
+                         
+                      <option value="1">Monday</option> 
+                      <option value="2">Tuesday</option>
+                      <option value="3">Wednesday</option> 
+                      <option value="4">Thursday</option>
+                      <option value="5">Friday</option> 
+                      <option value="6">Saturday</option>
+                      <option value="7">Sunday</option>
+                      
+                     
+                        
+                    </select>
+                </td>
+                         
+                      </tbody>
+                      <!-- Row 2 -->
+                      <tbody>
+                           
+                          <td>Sex:</td>
+                          <td>
+                            <select type="text" id= "Sex" name="Sex" method="post" required="required" placeholder="Sex" width="300" style="width: 300px">
+                               
+                                 
+                              <option value="1">Male</option> 
+                              <option value="2">Female</option>
+                             
+                             
+                            </select>
+                        </td>
+                          <td> MaritalStatus:</td>
+                          <td>
+                            <select type="text" id= "MaritalStatus" name="MaritalStatus" method="post" required="required" placeholder="MaritalStatus" width="300" style="width: 300px">
+                               
+                                 
+                              <option value="1">Single</option> 
+                              <option value="2">Married</option>
+                              <option value="3">Widow</option>
+                              <option value="4">Divorced</option>
+
+                             
+                            </select>
+                        </td>
+                          
+                      </tbody>
+                      </br>
+                      <!-- Row 3 -->
+                      <tbody>
+                           
+                          <td>Age:</td>
+                          <td>
+                           
+                            <input type="text" id="Age"  type="text" name="Age" placeholder="Age" required="required" width="300" style="width: 300px"/ > 
+                              
+                        
+                       </td>
+                          <td>PolicyType:</td>
+                          <td>
+                              <select type="text" id= "PolicyType" name="PolicyType" method="post" required="required" placeholder="PolicyType" width="300" style="width: 300px">
+                                  <option value="1">Sport - Liability</option>
+                                 <option value="2">Sport - Collision</option> 
+                                <option value="3">Sedan - Liability</option>
+                                <option value="4">Utility - All Perils</option>
+                                <option value="5">Sedan - All Perils</option> 
+                               <option value="6">Sedan - Collisio</option>
+                               <option value="7">Utility - Collision</option>
+                               <option value="8">Utility - Liability</option> 
+                              <option value="9">Sport - All Perils</option>
+                   
+                       
+                              </select>
+                          </td>
+                          
+                      </tbody>
+                      <tbody>
+                           
+                        <td>VehicleCategory:</td>
+                        <td>
+                            <select type="text" id= "VehicleCategory" name="VehicleCategory" method="post" required="required" placeholder="VehicleCategory" width="300" style="width: 300px">
+                                <option value="1">Sport</option>
+                               <option value="2">Utility</option> 
+                              <option value="3">Sedan</option>
+                           
+                 
+                     
+                            </select>
+                        </td>
+                        <td>VehiclePrice:</td>
+                        <td>
+                            <select type="text" id= "VehiclePrice" name="VehiclePrice" method="post" required="required" placeholder="VehiclePrice" width="300" style="width: 300px">
+                                <option value="1">more than 69000</option>
+                               <option value="2">20000 to 29000</option> 
+                              <option value="3">20000 to 29000</option>
+                              <option value="4">less than 20000</option>
+                              <option value="5">40000 to 59000</option> 
+                             <option value="6">60000 to 69000</option>
+                          
+                 
+                     
+                            </select>
+                        </td>
+                        
+                    </tbody>
+                      <!-- Row 4 --></br>
+                      <tbody>
+                           
+                        <td>Deductible:</td>
+                        <td>
+                         
+                          <input type="text" id="Deductible"  type="text" name="Deductible" placeholder="Deductible(300-700)" required="required" width="300" style="width: 300px"/ > 
+                            
+                      
+                     </td>
+                        <td>DriverRating:</td>
+                        <td>
+                         
+                            <input type="text" id="DriverRating"  type="text" name="DriverRating" placeholder="DriverRating(1-4)" required="required" width="300" style="width: 300px"/ > 
+                              
+                        
+                       </td>
+                        
+                    </tbody>
+                    <tbody>
+                           
+                        <td>Days_Policy_Accident:</td>
+                        <td>
+                            <select type="text" id= "Days_Policy_Accident" name="Days_Policy_Accident" method="post" required="required" placeholder="Days_Policy_Accident" width="300" style="width: 300px">
+                                <option value="1">more than 30</option>
+                               <option value="2">15 to 30</option> 
+                              <option value="3">1 to 7</option>
+                              <option value="4">8 to 15</option> 
+                              <option value="5">none</option>
+                 
+                     
+                            </select>
+                        </td>
+                        <td>Days_Policy_Claim:</td>
+                        <td>
+                            <select type="text" id= "Days_Policy_Claim" name="Days_Policy_Claim" method="post" required="required" placeholder="Days_Policy_Claim" width="300" style="width: 300px">
+                                <option value="1">more than 30</option>
+                               <option value="2">15 to 30</option> 
+                              <option value="3">none</option>
+                              <option value="4">8 to 15</option>
+                         
+                          
+                 
+                     
+                            </select>
+                        </td>
+                        
+                    </tbody>    
+                    <tbody>
+                           
+                        <td>AgeOfVehicle:</td>
+                        <td>
+                            <select type="text" id= "AgeOfVehicle" name="AgeOfVehicle" method="post" required="required" placeholder="AgeOfVehicle" width="300" style="width: 300px">
+                                <option value="1">3 years</option>
+                               <option value="2">6 years</option> 
+                              <option value="3">7 years</option>
+                              <option value="4">more than 7</option> 
+                              <option value="5">5 years</option>
+                              <option value="6">new</option> 
+                              <option value="7">4 years</option>
+                              <option value="8">2 years</option> 
+                          
+                     
+                            </select>
+                        </td>
+                        <td>AgeOfPolicyHolder:</td>
+                        <td>
+                            <select type="text" id= "AgeOfPolicyHolder" name="AgeOfPolicyHolder" method="post" required="required" placeholder="AgeOfPolicyHolder" width="300" style="width: 300px">
+                                <option value="1">26 to 30</option>
+                               <option value="2">31 to 35</option> 
+                              <option value="3">41 to 50</option>
+                              <option value="4">51 to 65</option>
+                              <option value="5">21 to 25</option>
+                               <option value="6">36 to 40</option> 
+                              <option value="7">16 to 17</option>
+                              <option value="8">over 65</option>
+                              <option value="9">18 to 20</option>
+                 
+                     
+                            </select>
+                        </td>
+                        
+                    </tbody>  
+                    <tbody>
+                           
+                        <td>PoliceReportFiled:</td>
+                        <td>
+                            <select type="text" id= "PoliceReportFiled" name="PoliceReportFiled" method="post" required="required" placeholder="PoliceReportFiled" width="300" style="width: 300px">
+                                <option value="1">Yes</option>
+                               <option value="2">No</option> 
+                        
+                          
+                     
+                            </select>
+                        </td>
+                        <td>WitnessPresent:</td>
+                        <td>
+                            <select type="text" id= "WitnessPresent" name="WitnessPresent" method="post" required="required" placeholder="WitnessPresent" width="300" style="width: 300px">
+                                <option value="1">Yes</option>
+                               <option value="2">No</option> 
+                           
+                 
+                     
+                            </select>
+                        </td>
+                        
+                    </tbody>  
+                    <tbody>
+                           
+                        <td>NumberOfCars:</td>
+                        <td>
+                            <select type="text" id= "NumberOfCars" name="NumberOfCars" method="post" required="required" placeholder="NumberOfCars" width="300" style="width: 300px">
+                                <option value="1">3 to 4</option>
+                               <option value="2">1 vehicle</option> 
+                        
+                               <option value="3">2 vehicles</option>
+                               <option value="4">5 to 8</option> 
+                               <option value="5">more than 8</option>
+                             
+                            </select>
+                        </td>
+                        <td>Year:</td>
+                        <td>
+                            <select type="text" id= "Year" name="Year" method="post" required="required" placeholder="Year" width="300" style="width: 300px">
+                                <option value="1">1994</option>
+                               <option value="2">1995</option> 
+                           
+                               <option value="1">1996</option>
+                            
+                     
+                            </select>
+                        </td>
+                        
+                    </tbody> 
+                    <tbody>
+                           
+                        <td>BasePolicy:</td>
+                        <td>
+                            <select type="text" id= "BasePolicy" name="BasePolicy" method="post" required="required" placeholder="BasePolicy" width="300" style="width: 300px">
+                                <option value="1">Collision</option>
+                               <option value="2">Liability</option> 
+                        
+                               <option value="3">All Perils</option>
+                        
+                             
+                            </select>
+                        </td>
+                      
+                        
+                    </tbody>      
+                  </table></center>
+                  </br>
+                  </br>
+                  <div class="center">
+                    <center>  <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button> </center> 
+                  </div>
+              </div>
+           </br>
+               <center> <a class="navbar-brand text-brand" > <span class="color-b">Prediction is:{{ prediction_text }}</span></a></center>
+          </form></center>
+                   
+                      
+                    </div>
+                  </div>
+
+
+</div>
+
+
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+ 
+ 
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/lib/easing/easing.min.js"></script>
+    <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="../static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="../static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
